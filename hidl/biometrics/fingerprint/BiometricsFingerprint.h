@@ -14,7 +14,11 @@
 #include <hidl/Status.h>
 #include <log/log.h>
 #include "UdfpsHandler.h"
+#ifndef DEVICE_USES_NEW_IMPLEMENTATION
+#include "fingerprint-legacy.h"
+#else
 #include "fingerprint.h"
+#endif
 
 namespace android {
 namespace hardware {
